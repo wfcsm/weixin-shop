@@ -1,0 +1,44 @@
+<!--index.wxml-->
+<view class="container">
+  <scroll-view scroll-y style="height:736px"  bindscrolltolower="addItem">
+    <view class="search">
+      <view class="search-content">
+        <image src="/images/search-pic.png" class="search-img" mode="scaleToFill" />
+        <input type="text" class="search-input" placeholder="请输入搜索内容" placeholder-class/>
+        <button class="search-btn">搜索</button>
+      </view>
+    </view>
+
+    <view class="swiper-container">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" indicator-active-color="#fff">
+        <block wx:for="{{imgUrls}}" wx:key="id" >
+          <swiper-item catchtap="shopDetail" id="{{item.id}}">
+            <image src="{{item.imgUrl}}" class="slide-image" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <view class="nav">
+      <scroll-view class="nav-x" scroll-x  >
+        <view class="nav-item {{state==item.id?'active':''}}"  data-index="{{item.id}}" wx:for="{{navigate}}" wx:key="id" catchtap="onNav">{{item.navbarName}}</view>
+      </scroll-view>
+    </view>
+
+    <view class="shopList-container" >
+      <view class="shopItem" wx:for="{{shopList}}" wx:key="id" id="{{item.id}}" catchtap="shopDetail">
+        <image class="shopItem-img" src="{{item.imgUrl}}" />
+        <view class="shopItem-name">
+          <text>{{item.name}}</text>
+        </view>
+        <view class="shopItem-price">
+          <text class="newPrice">￥{{item.price}}</text>
+          <text class="oldPrice">￥{{item.privilegePrice}}</text>
+        </view>
+      </view>
+
+
+
+    </view>
+  </scroll-view>
+</view>

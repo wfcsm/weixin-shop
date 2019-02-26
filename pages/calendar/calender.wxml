@@ -1,0 +1,29 @@
+<!--pages/calendar/calender.wxml-->
+<view class="container">
+  <view class="time-title" style="color:rgb(242,156,177)"> {{year}} 年 {{month}} 月</view>
+  <view class="week">
+    <block wx:for="{{weekArr}}" wx:key="index">
+      <view class="week-item" style="color:rgb(242,156,177)">{{item}}</view>
+    </block>
+  </view>
+  <view class="day">
+
+    <block wx:for="{{begainMonthdayArr}}" wx:key="index">
+      <view class="day-item" style="color:grey">
+        <view class="day-item-i"> {{item}}</view>
+      </view>
+    </block>
+
+    <block wx:for="{{nowMonthdayArr}}" wx:key="index">
+      <view class="day-item " style="color:green" catchtap="touch" data-touch="{{item}}">
+        <view class="day-item-i {{active ==item ? 'now' : ''}}">{{item}}</view>
+      </view>
+    </block>
+
+    <block wx:for="{{nextMontdayArr}}" wx:key="index">
+      <view class="day-item" style="color:grey">
+        <view class="day-item-i"> {{item}}</view>
+      </view>
+    </block>
+  </view>
+</view>

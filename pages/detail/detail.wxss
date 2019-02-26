@@ -1,0 +1,77 @@
+/* pages/detail/detail.wxss */
+.swiper-container {
+  background: #eee;
+  text-align: center;
+}
+swiper { 
+  height: 500rpx;
+}
+.swiper-image {
+  width: 80%;
+  height: 100%
+}
+.price  {
+  color: orangered;
+  font-size: 35px;
+  font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+}
+.privilegePrice {
+  color: rgba(128, 128, 128, 0.671);
+  text-decoration: line-through;
+  margin-left: 8px;
+  font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+}
+.discount {
+  color: white;
+  width: 70px;
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  background:#000;
+  text-align: center;
+  border-radius: 8px;
+  margin-left: 30px;
+  font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+}
+.dec {
+  padding-top: 20rpx;
+}
+.footer {
+  height: 100rpx;
+  /* line-height: 100rpx; */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  background: white;
+  box-shadow: 0 -2px 1px rgba(214, 213, 213, 0.5);
+}
+.customer, .cart {
+  display: flex;
+  flex-direction: column;
+  width: 60px;
+  /* background: yellow; */
+  font-size: 12px;
+  text-align: center;
+}
+.customer-img, .cart-img {
+  width: 60%;
+  margin: 0 auto;
+  padding-top:5px;
+}
+.addCart {
+  width: calc((100%-120)/3);
+  background: orangered;
+  color: white;
+  line-height: 100rpx;
+  text-align: center;
+}
+.buy {
+  width: calc((100%-120)/2);
+  background: red;
+  color: white;
+  line-height: 100rpx;
+  text-align: center;
+}

@@ -1,0 +1,42 @@
+<!--pages/my/my.wxml-->
+<view class="container">
+  <view class="userInfo">
+    <button class="userInfo-btn" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">登录</button>
+    <block wx:else>
+      <image class="userInfo-img" src="{{userInfo.avatarUrl}}" />
+      <text class="userInfo-name">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="main" style="height:{{height}}px">
+    <view class="main-item">
+      <image class="main-item-img" src="/images/order.png" />
+      <text class="main-item-font">我的订单</text>
+      <image class="main-item-img-left" src="/images/left.png" />
+    </view>
+    <view class="main-item" catchtap="sign">
+      <image class="main-item-img" src="/images/calendar.png" />
+      <text class="main-item-font">每日签到</text>
+      <image class="main-item-img-left" src="/images/left.png" />
+    </view>
+    <view class="main-item">
+      <image class="main-item-img" src="/images/address.png" />
+      <text class="main-item-font">收货地址</text>
+      <image class="main-item-img-left" src="/images/left.png" />
+    </view>
+
+    <view class="main-item" catchtap="phoneNumber">
+      <image class="main-item-img" src="/images/phone.png" />
+      <text class="main-item-font">电话客服</text>
+      <image class="main-item-img-left" src="/images/left.png" />
+    </view>
+
+    
+    <button open-type="contact" class="main-item">
+      <view  catchtap="customerService">
+        <image style="width:25px; height:25px;position:absolute;left:0;padding:10px" src="/images/customer_SM.png" />
+        <text  style="position:absolute;left:45px;top:2px;font-size:15px">在线客服</text>
+        <image style="width:25px; height:25px; position:absolute;right:10px;top:10px"  src="/images/left.png" />
+      </view>
+    </button>
+  </view>
+</view>

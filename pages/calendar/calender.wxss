@@ -1,0 +1,52 @@
+/* pages/calendar/calender.wxss */
+@keyframes choosed {
+  from {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.9);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.week,.day {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+}
+.week-item, .day-item {
+  width: 14%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 15px;
+  position: relative
+}
+.day-item-i {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 auto;
+}
+.now {
+  background: palevioletred;
+  color: white;
+  border-radius: 50px;
+  /* transition: all 0.4s linear;
+  transform:scale(1.2); */
+  transition: all 0.3s;
+  animation-name: choosed;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}

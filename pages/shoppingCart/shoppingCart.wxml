@@ -1,0 +1,45 @@
+<!--pages/shoppingCart/shoppingCart.wxml-->
+<view class="container">
+  <scroll-view class="scroll" scroll-y="true">
+    <block wx:for="{{cartList}}" wx:key="id">
+
+      <view class="shopItem">
+
+        <view class="shopItem-circle-wrapper">
+          <view class="circle {{item.flag?'active':''}}" catchtap="active" data-id="{{item.details.id}}"></view>
+        </view>
+
+        <view class="shopItem-image-wrapper">
+          <image class="image" style="width:150px;height:100px" mode="aspectFit" src="{{item.details.imgUrl}}" />
+        </view>
+
+
+        <view class="shopItem-main">
+          <view class="shopItem-main-title">
+            <text>{{item.details.name}}</text>
+          </view>
+          <view>
+            <text class="shopItem-main-price" >￥ {{item.details.price * item.num}}</text>
+          </view>
+        </view>
+
+        <view class="chooseBtn">
+          <view class="reduce" catchtap="reduce" data-id="{{item.details.id}}">-</view>
+          <view class="num">{{item.num}}</view>
+          <view class="add" catchtap="add" data-id="{{item.details.id}}">+</view>
+        </view>
+
+
+
+      </view>
+    </block>
+  </scroll-view>
+  <view class="shopItem bottom " >
+
+   <view class="shopItem-circle-wrapper" >
+          <view class="circle {{hidden==true?'active':''}}" catchtap="allChoosed" style="margin-top:-25.5px"></view>
+    </view>
+    <text class="total">合计：￥{{alltotal}}</text>
+    <view class="total-btn" style="width:{{btnWidth}}px">结算</view>
+  </view>
+</view>

@@ -1,0 +1,126 @@
+.search {
+  background: #2B2B2B;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.search-content {
+  width: 700rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+  border-radius: 10rpx;
+  display: flex;
+  background-color: #fff;
+}
+.search-img {
+  width: 50rpx;
+  height: 50rpx;
+  padding: 5rpx 20rpx;
+
+}
+.search-input {
+  width: 500rpx;
+  font-size: 28rpx;
+}
+.input-placeholder {
+  font-size: 14px;
+
+}
+.search-btn {
+  background-color: slateblue;
+  width: 150rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: white;
+  font-size: 28rpx;
+  border-radius: 0;
+  border: none;
+   border-top-right-radius: 10rpx;
+  border-bottom-right-radius: 10rpx; 
+  
+}
+swiper {
+  height: 300rpx;
+  /* padding: 2px ; */
+}
+.slide-image{
+  width: 100%;
+  height: 100%;
+}
+.shopList-container {
+  background: #eee;
+  display: flex;
+  /* justify-content: space-around; */
+  flex-wrap: wrap;
+}
+.shopItem {
+  background: #fff;
+  width: 45%;
+  height: 400rpx;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15rpx;
+  margin-left: 3.5%
+}
+.shopItem-img {
+  width: 100%;
+  height: 100%;
+}
+.shopItem-name ,.shopItem-price{
+  font-size: 16px;
+  /* height: 50rpx;
+  line-height: 50rpx; */
+  text-indent: 20rpx;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+.shopItem-name {
+  font-size: 12px;
+  height: 40rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.shopItem-price {
+  color: orangered
+}
+.newPrice {
+  font-weight: bold;
+  font-style: italic
+}
+.oldPrice{
+  color: gray;
+  text-decoration: line-through;
+  font-style: italic
+}
+
+ /* .nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}  */
+.nav-x {
+  width: 100%;
+  height: 100rpx;
+  white-space: nowrap;/*scroll-view横向滑动时一定要设置*/
+}
+.nav-item {
+  width: 200rpx;
+  height: 96rpx;
+  line-height: 96rpx;
+  text-align: center; 
+  display:inline-block;/*scroll-view横向滑动时一定要设置*/
+  font-size: 18px;
+}
+/*导航被点击*/
+.active { 
+  color: orangered;
+  border-bottom: 2px solid orangered;
+}
+/*隐藏滚动条*/
+/* ::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent
+} */
